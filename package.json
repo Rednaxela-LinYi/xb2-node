@@ -2,5 +2,11 @@
   "name": "xb2-node_follow_ninghao",
   "version": "1.0.0",
   "description": "",
-  "author": "" 
+  "author": "",
+  "dependencies": {
+    "express": "^4.17.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  }
 }
