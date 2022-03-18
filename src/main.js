@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3300;
+const port = 3000;
 
 app.listen(port,()=>{
   console.log("🚀服务已启动")
@@ -33,6 +33,15 @@ app.get('/posts/:postId',(request,response)=>{
   response.send(testData.filter((item,index)=> item.id === parseInt(postId)));
 })
 
+
+app.post('/posts',(request,response)=>{
+  console.log(request)
+  const {content} = request;
+  response.status(201);
+  response.send({
+    message: `这是成功创建的内容：${request.body}`
+  })
+})
 
 
 
