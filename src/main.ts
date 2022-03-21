@@ -1,10 +1,8 @@
-//const express = require('express');
-import express from 'express';
-const app = express();
-const port = 3000;
+import app from './app';
+import { APP_PORT } from './app/app.config';
 
-app.listen(port, () => {
-  console.log('🚀服务已启动');
+app.listen(APP_PORT, () => {
+  console.log('🚀`服务已启动');
 });
 
 app.get('/', (request, response) => {
@@ -34,11 +32,11 @@ app.get('/posts/:postId', (request, response) => {
 });
 
 app.post('/posts', (request, response) => {
-  console.log(request);
+  //console.log(request);
   const { content } = request.body;
-  response.status(201);
+  //response.status(201);
   response.send({
-    message: `这是成功创建的内容~：${content}`,
+    message: `这是成功创建的内容：${content}`,
   });
 });
 
