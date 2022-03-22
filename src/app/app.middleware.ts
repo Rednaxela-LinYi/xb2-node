@@ -15,11 +15,14 @@ export const defaultErrorHandler = (
   response: Response,
   next: NextFunction
 ) => {
-  let responseStatusCode, responseMessage;
+  // let responseStatusCode, responseMessage;
+  // responseStatusCode = 500;
+  // responseMessage = '服务器内部错误';
+  // console.log(responseMessage);
+  //
+  if (error.message) {
+    console.log(error.message);
+  }
 
-  responseStatusCode = 500;
-  responseMessage = '服务器内部错误';
-  console.log(responseMessage);
-  response.status(responseStatusCode).send(responseMessage);
-  next();
+  //response.send(response);
 };
