@@ -24,5 +24,5 @@ export const defaultErrorHandler = (
     console.log(error.message);
   }
 
-  //response.send(response);
+  response.send(response);
 };
