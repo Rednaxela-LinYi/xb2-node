@@ -1,8 +1,8 @@
 /node_modules
 /dist
-.gitignore*
 
 
 
 
 .env*
+config/*.key
