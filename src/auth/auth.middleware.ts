@@ -58,7 +58,7 @@ export const authGuard = async (
     if (!token) {
       throw new Error();
     }
-    //验证令牌
+    //验证令牌 这里如何验证public key和private key之间是否有关联?
     const decode = jwt.verify(token, PUBLIC_KEY, {
       algorithms: ['RS256'],
     });
